@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+}
+
+.dashboard {
+  --size: 280px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.dashboard > .left {
+  width: var(--size);
+}
+
+.dashboard > .right {
+  width: calc(100vw - var(--size));
+}
+
+.dashboard.active {
+  left: calc(-1 * var(--size));
+  width: calc(100vw + var(--size));
+}
+
+.dashboard.active > .right {
+  width: 100vw
+}
+
+.grid-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+@media only screen and (max-width: 980px) {
+
+  .dashboard.active {
+    left: 0;
+  }
+
+  .dashboard > .right {
+    width: 100vw;
+  }
+
+  .dashboard > .left {
+    width: 100%;
+    z-index: 50;
+    left: -300vw;
+  }
+
+  .dashboard > .left > .content {
+    width: var(--size);
+  }
+
+  .dashboard > .left.active {
+    left: 0;
+  }
+}
+.login{
+  @apply bg-cover bg-no-repeat;
+  background-image: url('/assets/cover-pattern.png');
+}
