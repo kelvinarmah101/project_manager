@@ -7,7 +7,7 @@ const Login = () =>{
         const passwordInput = document.querySelector('.checkPass');
         const passIcon = document.querySelector('.passIcon');
         const passShow = document.querySelector('.passShow')
-    
+        const users = document.querySelector('.users');
         function showPassword() {
           if (passwordInput.type === 'password') {
             passwordInput.type = 'text';
@@ -44,7 +44,7 @@ const Login = () =>{
                     <form action="/dashboard" method='get'>
                         <div className='input-group mb-3 '>
                             <label htmlFor="username" className='mb-2'>Username</label>
-                            <input type="text" name='username' id='username' placeholder='Enter your username' className='w-[100%] outline-[2px] outline-blue-400 p-2 border' />
+                            <input type="text" name='username' id='username' placeholder='Enter your username' className='w-[100%] outline-[2px] outline-blue-400 p-2 border checkPass' />
                         </div>
                         <div className='input-group mb-3 '>
                             <label htmlFor="password">Password</label>
@@ -55,10 +55,20 @@ const Login = () =>{
                             </div>
                             <a className='text-sm text-blue-400'>Forgot password?</a>
                         </div>
+
+                        <div className='input-group mb-3 '>
+                            <div className='relative'>
+                                <select name="user" id="" className='users'>
+                                    <option value="Lecturer">Lecturer</option>
+                                    <option value="Student">Student</option>
+                                </select>
+                            </div>
+                        </div>
+
                         <div className='input-group mb-3 '>
                             <label htmlFor="student_id">Student ID</label>
                             <div className='relative'>
-                            <input type="password" name='id' id='student_id' placeholder='eg. 00000000' className='w-[100%] outline-[2px] outline-blue-400 p-2 border'/>
+                            <input type="password" name='id' id='student_id' placeholder='eg. 00000000' className='w-[100%] outline-[2px] outline-blue-400 p-2 border checkPass'/>
                             <BsFillEyeSlashFill className='absolute bottom-[30%] right-[2%] text-lg passIcon'/>
                             <BsEyeFill className='absolute bottom-[30%] right-[2%] text-lg passShow hidden'/>
                             </div>

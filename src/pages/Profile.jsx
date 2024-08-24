@@ -5,36 +5,29 @@ const Profile = () => {
 
   const values = [
     {
-      name: 'Surname',
-      value: 'ADENIYI'
+      name: 'Surname'
     },
     {
-      name: 'Other Name(s)',
-      value: 'David Shalom'
+      name: 'Other Name(s)'
     },
     {
-      name: 'Birth Date',
-      value: 'Tuesday, May 7, 2002'
+      name: 'Birth Date'
     },
     {
-      name: 'Gender',
-      value: 'Male'
+      name: 'Gender'
     },
     {
-      name: 'School Email Address',
-      value: 'dsadeniyi@st.knust.edu.h'
+      name: 'School Email Address'
     },
     {
-      name: 'KNUST Mobile Number',
-      value: '0508527319'
+      name: 'KNUST Mobile Number'
     },
     {
-      name: 'Other Email Address',
-      value: 'adedavid.tech@gmail.com'
+      name: 'Other Email Address'
     },
     {
-      name: 'Primary Phone Number',
-      value: '0508809987'
+      name: 'Primary Phone Number'
+
     }
   ];
 
@@ -49,14 +42,14 @@ const Profile = () => {
 
         <div className="profile p-9">
           <div className="bg-orange-500 border-4 text-5xl text-white flex items-center justify-center image h-[150px] w-[150px] mx-auto rounded-full">
-            SH
+            
           </div>
 
           <div className="names">
-            <div className="font-medium text-3xl max-[500px]:text-xl my-3 mb-1">Adeniyi David Shalom</div>
-            <div className="font-medium text-xl  max-[500px]:text-base mb-1.5">Bsc Computer Science</div>
-            <div className="font-semibold text-gray-600 text-sm">Index Number: 4185520</div>
-            <div className="font-semibold text-gray-600 text-sm">Student ID: 20272394</div>
+            <div className="font-medium text-3xl max-[500px]:text-xl my-3 mb-1"></div>
+            <div className="font-medium text-xl  max-[500px]:text-base mb-1.5"></div>
+            <div className="font-semibold text-gray-600 text-sm"></div>
+            <div className="font-semibold text-gray-600 text-sm"></div>
           </div>
         </div>
       </div>
@@ -77,13 +70,16 @@ const Profile = () => {
           {values.map( item => 
             <div className="col-span-1 my-1">
               <label htmlFor="" className='my-1.5 block text-gray-700'>{item.name}</label>
-              <input type="text" className='border border-gray-400 rounded-lg p-3 w-full bg-gray-100' value={item.value} disabled />
+              <input type="text" className='border border-gray-400 rounded-lg p-3 w-full bg-gray-100' />
             </div>
           )}
 
           <div className="col-span-1 my-1"></div>
 
         </form>
+        <div className="flex items-center justify-end mt-6">
+          <button className="bg-blue-500 text-white px-6 py-3 text-center rounded">Save Details</button>
+        </div>
 
 
       </div>
